@@ -2,7 +2,7 @@ knownWords = ["teapot", "teammate", "teamster", "teamwork", "tear", "tear gas"] 
 for x in range(len(knownWords)): # x - Index for knownWords
     i = 1 #String INDEX
     inputWord = "teamwork" #String 
-    distanceLev = abs(len(inputWord) - len(knownWords[x]))#Levenshtein distance #counts distanceLev if string is smaller or bigger then knownWords string 
+    distanceLev = abs(len(inputWord) - len(knownWords[x]))#counts distanceLev if string is smaller or bigger then knownWords string 
     while i < len(inputWord) + 1:
         if inputWord[:i] not in knownWords[x][:i]:
             if inputWord[i-1:i] in knownWords[x][i:i+1]:
